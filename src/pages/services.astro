@@ -7,14 +7,13 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
-import progressBuilding from "@images/progress-building.avif";
-import underConstruction from "@images/under-construction.avif";
+import ausImage from "@images/ausimage.jpeg";
+import ukImage from "@images/ukimage.webp";
+import usImage from "@images/usimage.webp";
+import studentLife from "@images/student-life.jpeg"; // Example of additional image
+import scholarship from "@images/scholarship.png"; // Example of additional image
+import careerOpportunities from "@images/career-opportunities.png"; // Example of additional image
+import diverseCampus from "@images/diverse-campus.jpeg"; // Example of additional image
 import { SITE } from "@data/constants";
 
 interface Article {
@@ -36,63 +35,62 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Exploring Higher Education in Australia",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Australia is renowned for its world-class universities and vibrant student life. With diverse courses and a multicultural environment, studying here offers a unique experience. Learn about the admission process, scholarships, and the vibrant campus life that awaits you.",
     single: false,
-    imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgOne: ausImage,
+    imgOneAlt: "Australian university campus.",
+    imgTwo: studentLife,
+    imgTwoAlt: "Students enjoying life on campus.",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Navigating the UK Education System",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
+      "The UK is home to some of the oldest and most prestigious universities in the world. Our guidance helps you understand the application requirements, living costs, and opportunities for international students. Discover your path to studying in the UK.",
+    img: ukImage,
+    imgAlt: "UK university building.",
     btnExists: true,
     btnTitle: "Learn More",
     btnURL: "#",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Unlocking Opportunities in the US",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Studying in the US opens doors to vast educational resources and networking opportunities. We provide insights into university selection, application strategies, and student visas, ensuring you are well-prepared for your journey.",
     single: false,
-    imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgOne: usImage,
+    imgOneAlt: "US university campus.",
+    imgTwo: careerOpportunities,
+    imgTwoAlt: "Career opportunities for graduates.",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Scholarships and Financial Aid",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
-    img: usingTools,
-    imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+      "Financial concerns shouldn't deter you from pursuing your dreams. We provide information on available scholarships, grants, and financial aid options for international students in Australia, the UK, and the US.",
+    img: scholarship,
+    imgAlt: "Scholarship application process.",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "Diverse Campus Experience",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "Experience the richness of diverse cultures on campus. Studying abroad not only enhances your academic experience but also broadens your worldview. Join a community of students from various backgrounds and make lifelong connections.",
     single: false,
-    imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
+    imgOne: diverseCampus,
+    imgOneAlt: "Diverse group of students.",
+    imgTwo: studentLife,
+    imgTwoAlt: "Students participating in campus activities.",
     btnExists: true,
-    btnTitle: "Read more",
+    btnTitle: "Read More",
     btnURL: "#",
   },
 ];
 
-const pageTitle: string = `Services | ${SITE.title}`;
+const pageTitle: string = `Study Abroad Services | ${SITE.title}`;
 ---
 
 <MainLayout
@@ -100,35 +98,28 @@ const pageTitle: string = `Services | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    "@id": "https://yourblog.com/study-abroad-services",
+    "url": "https://yourblog.com/study-abroad-services",
+    "name": "Study Abroad Services | Your Blog",
+    "description": "Your guide to higher education abroad, covering opportunities, scholarship options, and student life in Australia, the UK, and the US.",
     "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+      "@type": "WebSite",
+      "url": "https://yourblog.com",
+      "name": "Your Blog",
+      "description": "Your comprehensive resource for higher education abroad."
     },
     "inLanguage": "en-US"
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    title="Explore Your Future with Higher Education Abroad"
+    subTitle="Discover the vast opportunities that await you in Australia, the UK, and the US. Our expert guidance will help you navigate the admission process, scholarships, and student life."
     btnExists={true}
     btnTitle="Schedule a Consultation"
     btnURL="#"
   />
-  <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
-  They alternate for variety in design.
-  The 'btnExists' property is used to toggle the display of a button in these sections.
-  When btnExists={true}, a button is displayed.
-  This can be used to link to more detailed information or related resources.
-  RightSection can also conditionally render one or two images based on the 'single' property.
-  If 'single' is true, it displays one image, otherwise it displays two.
-  -->
+  
   {
     articles.map(article => {
       return article.isRightSection ? (
@@ -157,24 +148,25 @@ const pageTitle: string = `Services | ${SITE.title}`;
       );
     })
   }
+  
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
     title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
-    mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
+    subTitle="Our commitment to providing accurate and reliable information is reflected in the following stats."
+    mainStatTitle="95%"
+    mainStatSubTitle="of our clients successfully enroll in their desired programs."
     stats={[
       {
-        stat: "99.8%",
-        description: "project completion rate",
+        stat: "1,000+",
+        description: "students guided each year.",
       },
       {
-        stat: "5,000+",
-        description: "successful installations",
+        stat: "200+",
+        description: "scholarship options available.",
       },
       {
-        stat: "85%",
-        description: "client growth year-over-year",
+        stat: "90%",
+        description: "satisfaction rate from our clients.",
       },
     ]}
   />

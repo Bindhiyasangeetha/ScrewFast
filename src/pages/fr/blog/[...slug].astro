@@ -12,15 +12,15 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
-// Update getStaticPaths for French posts
+// Update getStaticPaths for posts related to higher education
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ id }) =>
-    id.startsWith("fr/")
+    id.startsWith("education/")
   );
   return blogPosts.map((post) => {
-    const slugWithoutLang = post.slug.replace(/^fr\//, ""); // Remove the "fr/" prefix
+    const slugWithoutLang = post.slug.replace(/^education\//, ""); // Remove the "education/" prefix
     return {
-      params: { lang: "fr", slug: slugWithoutLang },
+      params: { lang: "en", slug: slugWithoutLang },
       props: { post },
     };
   });
@@ -31,7 +31,7 @@ const { post } = Astro.props;
 // Fetch related posts
 const blogPosts: CollectionEntry<"blog">[] = await getCollection(
   "blog",
-  ({ id }) => id.startsWith("fr/")
+  ({ id }) => id.startsWith("education/")
 );
 const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
   (blogEntry) => blogEntry.slug !== post.slug
@@ -136,9 +136,9 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
       </div>
     </div>
     <PostFeedback
-      title="Cet article était-il utile?"
-      firstChoice="Oui"
-      secondChoice="Non"
+      title="Was this article helpful?"
+      firstChoice="Yes"
+      secondChoice="No"
     />
   </section>
 
@@ -148,14 +148,14 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
       <h2
         class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
       >
-        Articles connexes
+        Related Articles
       </h2>
     </div>
 
     <div class="grid grid-cols-2 gap-6">
       {
         relatedPosts.map((entry) => (
-          <CardRelated blogEntry={entry} recentBlogLocale="fr" />
+          <CardRelated blogEntry={entry} recentBlogLocale="en" />
         ))
       }
     </div>
