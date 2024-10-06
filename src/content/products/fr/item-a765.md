@@ -1,54 +1,53 @@
 ---
-title: "SF-AB A765"
-description: "Ensemble de Vis Assorties"
+title: "Explorer les Programmes de Diplôme à l'Étranger"
+description: "Votre Passerelle vers les Études de Diplôme Internationales"
 main:
   id: 2
   content: |
-    Découvrez l'ensemble de vis assorties SF-AB A765 – la solution ultime pour vos besoins de fixation. Ce set complet comprend une grande variété de vis soigneusement sélectionnées pour aborder divers projets avec facilité et précision.
-  imgCard: "@/images/product-image-2.avif"
-  imgMain: "@/images/product-image-main-2.avif"
-  imgAlt: "Boîtes factices de l'ensemble de vis assorties"
+    Bienvenue dans votre guide essentiel pour explorer les programmes de diplôme à l'étranger. Cette ressource est conçue pour les étudiants recherchant des diplômes avancés dans des environnements internationaux, fournissant des informations cruciales sur divers programmes de diplôme, les processus de candidature et des conseils essentiels pour vous aider à réussir dans votre parcours académique.
+  imgCard: "@/images/blog5.jpeg" 
+  imgMain: "@/images/blog5.jpeg" 
+  imgAlt: "Maquette des ressources pour les études supérieures"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
-    title: "Description"
+    title: "Aperçu"
   - id: "tabs-with-card-item-2"
     dataTab: "#tabs-with-card-2"
-    title: "Spécifications"
+    title: "Principaux Programmes de Diplôme"
   - id: "tabs-with-card-item-3"
     dataTab: "#tabs-with-card-3"
-    title: "Plans"
+    title: "Bourses d'Études"
 longDescription:
-  title: "Solutions Polyvalentes de Fixation"
+  title: "Guide Complet des Études de Diplôme à l'Étranger"
   subTitle: |
-    L'ensemble de vis assorties SF-AB A765 offre une polyvalence et une commodité inégalées, ce qui en fait le choix idéal pour les amateurs de bricolage et les professionnels. Avec une sélection complète de vis, vous aurez toujours le bon élément de fixation pour chaque tâche.
-  btnTitle: "Contactez les ventes pour en savoir plus"
+    Notre guide des programmes de diplôme à l'étranger offre des perspectives inestimables et des ressources adaptées aux étudiants envisageant de poursuivre des études supérieures. Avec des informations approfondies sur les universités, diverses disciplines de diplôme et options de financement, vous serez bien équipé pour une poursuite académique réussie.
+  btnTitle: "Contactez-nous pour plus d'informations"
   btnURL: "#"
 descriptionList:
-  - title: "Grande Variété"
-    subTitle: "Comprend une gamme diversifiée de types et de tailles de vis pour s'adapter à diverses applications et matériaux."
-  - title: "Facilité d'Utilisation"
-    subTitle: "Chaque vis est conçue pour une installation facile, garantissant une fixation sans tracas à chaque fois."
-  - title: "Commodité"
-    subTitle: "Élimine le besoin de multiples déplacements au magasin de bricolage, économisant temps et effort sur vos projets."
+  - title: "Programmes de Diplôme Diversifiés"
+    subTitle: "Explorez une large gamme de programmes de diplôme dans diverses disciplines, de l'affaires à la science et aux arts."
+  - title: "Processus de Candidature Simplifié"
+    subTitle: "Guide détaillé sur les exigences de candidature, y compris les documents nécessaires et les délais."
+  - title: "Options de Soutien Financier"
+    subTitle: "Découvrez les bourses d'études et les opportunités de financement disponibles pour les étudiants internationaux."
 specificationsLeft:
-  - title: "Matériau"
-    subTitle: "Fabriqué à partir de matériaux de haute qualité tels que l'acier inoxydable, assurant durabilité et résistance à la corrosion."
-  - title: "Assortiment"
-    subTitle: "Contient un assortiment généreux de vis, incluant des vis à bois, des vis mécaniques, et des vis pour tôle."
-  - title: "Quantité"
-    subTitle: "Chaque set comprend une quantité suffisante de vis pour gérer une large gamme de projets et de tâches."
-  - title: "Tailles"
-    subTitle: "Disponible en différentes tailles pour s'adapter aux exigences de divers projets, assurant compatibilité et polyvalence."
+  - title: "Aperçus Culturels"
+    subTitle: "Comprenez les nuances culturelles des études dans différents pays et comment elles impactent votre éducation."
+  - title: "Services de Soutien aux Étudiants"
+    subTitle: "Découvrez divers services de soutien pour les étudiants diplômés, y compris le mentorat et le conseil en carrière."
+  - title: "Aperçu des Dépenses de Vie"
+    subTitle: "Obtenez un aperçu du coût de la vie dans divers pays pour vous aider à planifier efficacement vos finances."
+  - title: "Vie des Étudiants Diplômés"
+    subTitle: "Un aperçu de la vie en tant qu'étudiant diplômé, y compris le réseautage, le développement professionnel et l'engagement communautaire."
 tableData:
-  - feature: ["Spécification", "Valeur"]
+  - feature: ["Ressource", "Détails"]
     description:
-      - ["Longueur (mm)", "Divers"]
-      - ["Poids (g)", "N/A"]
-      - ["Matériau", "Acier Inoxydable"]
-      - ["Finition", "Assortie"]
-      - ["Contenu du Pack", "Diverses vis dans un ensemble"]
+      - ["Programmes de Diplôme", "Informations sur divers programmes de diplôme offerts par les meilleures universités du monde."]
+      - ["Bourses d'Études", "Détails complets sur les options d'aide financière pour les études de diplôme."]
+      - ["Coût de la Vie", "Conseils sur la budgétisation et les dépenses de vie lors des études à l'étranger."]
+      - ["Adaptation Culturelle", "Stratégies pour s'adapter à un nouvel environnement académique et culturel."]
+      - ["Stratégies de Candidature", "Conseils d'experts pour rédiger des candidatures de diplôme compétitives."]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/B1.jpeg"
 ---

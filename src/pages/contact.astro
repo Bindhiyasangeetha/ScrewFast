@@ -1,30 +1,58 @@
 ---
 // Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
-import ContactSection from "@components/sections/fr/ContactSection_fr.astro";
+import ContactSection from "@components/sections/misc/ContactSection.astro"; // Updated to English
 ---
 
 <!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
 <MainLayout
-  title="Contact | ScrewFast"
-  lang="fr"
+  title="Higher Education in Abroad | YourWebsite"
+  lang="en" 
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk//fr/contact",
-    url: "https://screwfast.uk//fr/contact",
-    name: "Nous Contacter | ScrewFast",
+    "@id": "https://yourwebsite.com/en/contact",
+    url: "https://yourwebsite.com/en/contact",
+    name: "Contact Us | gravity",
     description:
-      "Vous avez des questions ou souhaitez discuter d'un projet ? Contactez-nous et élaborons ensemble la solution parfaite avec nos outils et services.",
+      "Do you have questions about higher education abroad or want to discuss advice? Contact us, and let's develop the perfect solution for your academic future.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk/fr/",
-      name: "ScrewFast",
+      url: "https://yourwebsite.com/en/",
+      name: "YourWebsite",
       description:
-        "ScrewFast propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
+        "YourWebsite provides resources and expert guidance to help students navigate the higher education processes abroad.",
     },
-    inLanguage: "fr",
+    inLanguage: "en", // Set to English
   }}
 >
-  <ContactSection />
+  <ContactSection 
+    contactDetails={{
+      email: "bindhiya0401@gmail.com",
+      phone: "9876543213",
+      address: "KCT Tech Park, Gravity AI, Coimbatore",
+    }} 
+  />
+  
+  <!-- Additional resources related to higher education abroad -->
+  <section>
+    <h2>Online Resources for Higher Education Abroad</h2>
+    <ul>
+      <li>
+        <a href="https://www.studyabroad.com/" target="_blank">Study Abroad</a> - A comprehensive site to explore study opportunities abroad.
+      </li>
+      <li>
+        <a href="https://www.educationusa.state.gov/" target="_blank">EducationUSA</a> - Resources to help international students prepare to study in the United States.
+      </li>
+      <li>
+        <a href="https://www.topuniversities.com/" target="_blank">Top Universities</a> - Rankings and information on universities worldwide.
+      </li>
+      <li>
+        <a href="https://www.studyportals.com/" target="_blank">StudyPortals</a> - Find your study program abroad.
+      </li>
+      <li>
+        <a href="https://www.idp.com/global/" target="_blank">IDP Education</a> - Advice and support for studying abroad, especially in English-speaking countries.
+      </li>
+    </ul>
+  </section>
 </MainLayout>

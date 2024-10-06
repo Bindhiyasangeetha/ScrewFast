@@ -1,21 +1,20 @@
 ---
-// Import necessary components
+// Importer les composants nécessaires
 import MainLayout from "@/layouts/MainLayout.astro";
 import MainSection from "@components/ui/blocks/MainSection.astro";
 import LeftSection from "@components/ui/blocks/LeftSection.astro";
 import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
-// Import necessary images
-import campusLife from "@images/campus-life.avif";
-import studyAbroad from "@images/study-abroad.avif";
-import applicationProcess from "@images/application-process.avif";
-import scholarships from "@images/scholarships.avif";
-import careerOpportunities from "@images/career-opportunities.avif";
-import studentNetworking from "@images/student-networking.avif";
-import successfulAlumni from "@images/successful-alumni.avif";
-import studyingInLibrary from "@images/studying-in-library.avif";
+// Importer les images nécessaires
+import ausImage from "@images/ausimage.jpeg";
+import ukImage from "@images/ukimage.webp";
+import usImage from "@images/usimage.webp";
+import studentLife from "@images/student-life.jpeg"; // Exemple d'image supplémentaire
+import scholarship from "@images/scholarship.png"; // Exemple d'image supplémentaire
+import careerOpportunities from "@images/career-opportunities.png"; // Exemple d'image supplémentaire
+import diverseCampus from "@images/diverse-campus.jpeg"; // Exemple d'image supplémentaire
+import { SITE } from "@data/constants";
 
 interface Article {
   isRightSection: boolean;
@@ -36,117 +35,93 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Expert Guidance for Your Education Abroad Journey",
+    title: "Explorer l'Éducation Supérieure en Australie",
     subTitle:
-      "Embarking on your journey to study abroad can feel overwhelming. With our professional consultation services, we guide you at every step, ensuring you make well-informed decisions. Whether you're seeking advice on the application process or selecting the right university, our experts are here to help.",
+      "L'Australie est renommée pour ses universités de classe mondiale et sa vie étudiante dynamique. Avec des cours diversifiés et un environnement multiculturel, étudier ici offre une expérience unique. Découvrez le processus d'admission, les bourses et la vie de campus vibrante qui vous attendent.",
     single: false,
-    imgOne: campusLife,
-    imgOneAlt: "Vibrant campus life with students interacting.",
-    imgTwo: studyAbroad,
-    imgTwoAlt: "Student with a suitcase preparing to study abroad.",
+    imgOne: ausImage,
+    imgOneAlt: "Campus universitaire australien.",
+    imgTwo: studentLife,
+    imgTwoAlt: "Étudiants profitant de la vie sur le campus.",
   },
   {
     isRightSection: false,
-    title: "Streamlining the Application Process",
+    title: "Naviguer dans le Système Éducatif du Royaume-Uni",
     subTitle:
-      "From gathering necessary documents to preparing a stellar application, we provide all the resources you need to streamline your application process. Our team ensures that you meet deadlines, present a strong application, and increase your chances of acceptance into top universities.",
-    img: applicationProcess,
-    imgAlt: "Application process checklist.",
+      "Le Royaume-Uni abrite certaines des universités les plus anciennes et les plus prestigieuses du monde. Notre guide vous aide à comprendre les exigences de candidature, le coût de la vie et les opportunités pour les étudiants internationaux. Découvrez votre chemin vers l'étude au Royaume-Uni.",
+    img: ukImage,
+    imgAlt: "Bâtiment universitaire au Royaume-Uni.",
     btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "https://yourwebsite.com/application-process",
+    btnTitle: "En savoir plus",
+    btnURL: "#",
   },
   {
     isRightSection: true,
-    title: "Navigating Scholarships and Financial Aid",
+    title: "Débloquer des Opportunités aux États-Unis",
     subTitle:
-      "Finding scholarships and financial aid opportunities can be a daunting task. We offer tailored guidance to help you explore various funding options and secure the financial assistance you need to pursue your education abroad.",
+      "Étudier aux États-Unis ouvre des portes à des ressources éducatives vastes et à des opportunités de réseautage. Nous fournissons des informations sur la sélection des universités, les stratégies de candidature et les visas étudiants, garantissant que vous êtes bien préparé pour votre parcours.",
     single: false,
-    imgOne: scholarships,
-    imgOneAlt: "Scholarships form and documents.",
-    imgTwo: studentNetworking,
-    imgTwoAlt: "Students networking and discussing opportunities.",
+    imgOne: usImage,
+    imgOneAlt: "Campus universitaire aux États-Unis.",
+    imgTwo: careerOpportunities,
+    imgTwoAlt: "Opportunités de carrière pour les diplômés.",
   },
   {
     isRightSection: false,
-    title: "Exploring Career Opportunities Post-Graduation",
+    title: "Bourses et Aides Financières",
     subTitle:
-      "We help you explore career opportunities in your chosen field after completing your education. Our services include guidance on work visas, connecting with alumni, and building a strong resume that enhances your employability in your target country.",
-    img: careerOpportunities,
-    imgAlt: "Graduate exploring career opportunities.",
-    btnExists: true,
-    btnTitle: "Explore Careers",
-    btnURL: "https://yourwebsite.com/career-opportunities",
+      "Les préoccupations financières ne doivent pas vous dissuader de poursuivre vos rêves. Nous vous fournissons des informations sur les bourses disponibles, les subventions et les options d'aide financière pour les étudiants internationaux en Australie, au Royaume-Uni et aux États-Unis.",
+    img: scholarship,
+    imgAlt: "Processus de demande de bourse.",
   },
   {
     isRightSection: true,
-    title: "Success Stories: Alumni Achievements",
+    title: "Expérience de Campus Diversifiée",
     subTitle:
-      "Our guidance doesn't stop at graduation. Many of our students have gone on to achieve remarkable success in their careers. Explore our alumni success stories and see how their education abroad helped shape their futures.",
+      "Vivez la richesse des cultures diverses sur le campus. Étudier à l'étranger améliore non seulement votre expérience académique, mais élargit également votre vision du monde. Rejoignez une communauté d'étudiants issus de divers horizons et créez des liens pour la vie.",
     single: false,
-    imgOne: successfulAlumni,
-    imgOneAlt: "Successful alumni at a professional networking event.",
-    imgTwo: studyingInLibrary,
-    imgTwoAlt: "Student studying in a library, focused on academic growth.",
+    imgOne: diverseCampus,
+    imgOneAlt: "Groupe d'étudiants diversifiés.",
+    imgTwo: studentLife,
+    imgTwoAlt: "Étudiants participant à des activités sur le campus.",
     btnExists: true,
-    btnTitle: "Read More",
-    btnURL: "https://yourwebsite.com/alumni-success",
+    btnTitle: "Lire plus",
+    btnURL: "#",
   },
 ];
+
+const pageTitle: string = `Services d'Études à l'Étranger | ${SITE.title}`;
 ---
 
-// Main Layout for the services page, including internationalization and structured data
 <MainLayout
-  title="Services | Higher Education Abroad"
-  lang="en"
+  title={pageTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://yourwebsite.com/higher-education-abroad",
-    url: "https://yourwebsite.com/higher-education-abroad",
-    name: "Expert Guidance for Higher Education Abroad | YourWebsite",
-    description:
-      "Providing expert guidance and comprehensive solutions for students planning to study abroad, from consultation to post-graduation success.",
-    isPartOf: {
+    "@id": "https://yourblog.com/services-etudes-etranger",
+    "url": "https://yourblog.com/services-etudes-etranger",
+    "name": "Services d'Études à l'Étranger | Votre Blog",
+    "description": "Votre guide pour les études à l'étranger, couvrant les opportunités, les options de bourses et la vie étudiante en Australie, au Royaume-Uni et aux États-Unis.",
+    "isPartOf": {
       "@type": "WebSite",
-      url: "https://yourwebsite.com",
-      name: "YourWebsite",
-      description:
-        "YourWebsite offers top-tier guidance and resources for students seeking higher education opportunities abroad, including application advice, financial aid, and career planning.",
+      "url": "https://yourblog.com",
+      "name": "Votre Blog",
+      "description": "Votre ressource complète pour les études à l'étranger."
     },
-    inLanguage: "en",
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "bindhiya0401@gmail.com",
-      telephone: "+91-9876543213",
-      contactType: "Customer Support",
-      areaServed: "Worldwide",
-    },
-    author: {
-      "@type": "Person",
-      name: "Bindhiya J",
-      email: "bindhiya0401@gmail.com",
-      telephone: "+91-9876543213",
-      affiliation: {
-        "@type": "Organization",
-        name: "YourWebsite",
-        url: "https://yourwebsite.com",
-      },
-    },
+    "inLanguage": "fr-FR"
   }}
 >
-  <!--MainSection: Introductory section of the page with a CTA button-->
+  <!--MainSection est la section introductive de la page, elle contient également un bouton CTA-->
   <MainSection
-    title="Your Pathway to Global Education"
-    subTitle="At YourWebsite, we're committed to providing comprehensive solutions and expert guidance to help you achieve your dream of studying abroad. From application assistance to post-graduation career advice, we support you every step of the way."
+    title="Explorez Votre Avenir avec les Études à l'Étranger"
+    subTitle="Découvrez les vastes opportunités qui vous attendent en Australie, au Royaume-Uni et aux États-Unis. Nos experts vous guideront dans le processus d'admission, les bourses et la vie étudiante."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL={getRelativeLocaleUrl("en", "https://yourwebsite.com/contact")}
+    btnTitle="Planifiez une Consultation"
+    btnURL="#"
   />
   
-  <!-- Alternating RightSection and LeftSection for different service descriptions -->
   {
-    articles.map((article) => {
+    articles.map(article => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
@@ -173,25 +148,25 @@ const articles: Article[] = [
       );
     })
   }
-
-  <!-- FeaturesStats: Showcasing key metrics -->
+  
+  <!--La section FeaturesStats présente des statistiques essentielles précieuses pour les utilisateurs-->
   <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to excellence is evident in every step of your educational journey. At YourWebsite, we pride ourselves on delivering top-tier support and guidance to help you achieve your goals abroad."
-    mainStatTitle="98%"
-    mainStatSubTitle="of our clients rate their study abroad experience as life-changing"
+    title="Par les Chiffres"
+    subTitle="Notre engagement à fournir des informations précises et fiables se reflète dans les statistiques suivantes."
+    mainStatTitle="95%"
+    mainStatSubTitle="de nos clients s'inscrivent avec succès dans les programmes de leur choix."
     stats={[
       {
-        stat: "1000+",
-        description: "successful student placements",
+        stat: "1,000+",
+        description: "étudiants guidés chaque année.",
       },
       {
-        stat: "20+",
-        description: "partner universities worldwide",
+        stat: "200+",
+        description: "options de bourses disponibles.",
       },
       {
         stat: "90%",
-        description: "student visa approval rate",
+        description: "taux de satisfaction de nos clients.",
       },
     ]}
   />

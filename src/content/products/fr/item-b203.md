@@ -1,55 +1,53 @@
 ---
-title: "SF-BN B203"
-description: "Ensemble de boulons à vis et écrous"
+title: "Programmes Doctoraux à l'Étranger"
+description: "Ressource Essentielle pour les Candidats Doctorants"
 main:
   id: 3
   content: |
-    Découvrez le SF-BN B203 – votre compagnon fiable pour des fixations de qualité professionnelle. Cet ensemble complet comprend une sélection polyvalente de boulons à vis et d'écrous, méticuleusement conçus pour offrir la tenue la plus solide pour vos projets de construction et d'assemblage.
-  imgCard: "@/images/product-image-3.avif"
-  imgMain: "@/images/product-image-main-3.avif"
-  imgAlt: "Maquettes de boîtes d'un ensemble de boulons à vis et écrous"
+    Explorez notre guide complet sur les programmes doctoraux à l'étranger, conçu pour les étudiants souhaitant poursuivre un doctorat ou d'autres diplômes doctoraux. Cette ressource fournit des informations cruciales sur divers domaines d'études, les processus de candidature et des conseils pour des propositions de recherche réussies.
+  imgCard: "@/images/doc.jpeg" 
+  imgMain: "@/images/doc.jpeg" 
+  imgAlt: "Maquette des ressources pour les programmes doctoraux"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
-    title: "Description"
+    title: "Aperçu"
   - id: "tabs-with-card-item-2"
     dataTab: "#tabs-with-card-2"
-    title: "Spécifications"
+    title: "Ressources Clés"
   - id: "tabs-with-card-item-3"
     dataTab: "#tabs-with-card-3"
-    title: "Plans"
+    title: "Opportunités de Financement"
 longDescription:
-  title: "La force rencontre la précision"
+  title: "Guide Complet pour Poursuivre un Doctorat"
   subTitle: |
-    L'ensemble de boulons à vis et écrous SF-BN B203 offre une durabilité robuste et une précision pour les professionnels de la construction, garantissant des performances fiables dans chaque application, de l'encadrement de maisons à l'assemblage de machines.
-  btnTitle: "Contactez le service commercial pour en savoir plus"
+    Notre guide des programmes doctoraux à l'étranger offre des informations approfondies et des ressources pour les candidats au doctorat. Avec des informations détaillées sur les universités, les opportunités de recherche et le soutien financier, vous serez bien préparé pour entreprendre votre parcours doctoral.
+  btnTitle: "Contactez-nous pour plus d'informations"
   btnURL: "#"
 descriptionList:
-  - title: "Résistance à la corrosion"
-    subTitle: "Le revêtement en zinc offre non seulement un aspect poli, mais protège également contre la corrosion, garantissant une longue durée de vie."
-  - title: "Sécurité améliorée"
-    subTitle: "Un ajustement sécurisé se traduit par des structures plus sûres avec un risque réduit de défaillance des composants."
-  - title: "Praticité"
-    subTitle: "Cet ensemble tout-en-un signifie que vous avez la bonne taille sous la main, réduisant les retards de projet et les allers-retours supplémentaires au magasin de bricolage."
+  - title: "Domaines d'Étude Diversifiés"
+    subTitle: "Informations sur divers programmes doctoraux à travers plusieurs disciplines pour s'aligner sur vos intérêts académiques."
+  - title: "Guidance sur le Processus de Candidature"
+    subTitle: "Instructions étape par étape sur le processus de candidature, y compris les documents requis et les délais."
+  - title: "Opportunités de Financement de Recherche"
+    subTitle: "Explorez les bourses et subventions disponibles pour les candidats au doctorat."
 specificationsLeft:
-  - title: "Composition du matériau"
-    subTitle: "Fabriqué à partir d'acier de haute qualité, offrant résistance et fiabilité pour des applications exigeantes."
-  - title: "Finition de surface"
-    subTitle: "Protégé par un revêtement de zinc pour offrir une résistance accrue à la corrosion et une longévité."
-  - title: "Quantité par ensemble"
-    subTitle: "L'ensemble comprend une sélection équilibrée de 25 boulons à vis et 25 écrous assortis."
-  - title: "Assortiment de tailles"
-    subTitle: "Comprend une gamme complète de tailles pour répondre à diverses exigences de projet, garantissant compatibilité et polyvalence."
-specificationsRight:
-  - title: "Détails du filetage"
-    subTitle: "Conçu avec des filets coupés avec précision pour un ajustement sécurisé et une installation facile."
-  - title: "Propriétés mécaniques"
-    subTitle: "Chaque boulon et écrou est conçu pour répondre à des indices de charge spécifiques ou à des normes de résistance, adaptés aux applications structurelles."
-  - title: "Normes et certifications"
-    subTitle: "Conforme aux normes et certifications industrielles pertinentes, garantissant une qualité et une sécurité constantes."
-  - title: "Applications adaptées"
-    subTitle: "Idéal pour un large éventail d'utilisations, des environnements de construction aux assemblages mécaniques qui nécessitent des joints solides et sécurisés."
+  - title: "Aperçus Culturels"
+    subTitle: "Comprenez les dynamiques culturelles de l'étude dans différents pays pendant votre parcours doctoral."
+  - title: "Services de Soutien Académique"
+    subTitle: "Renseignez-vous sur le mentorat, le conseil et le soutien disponibles pour les étudiants doctorants."
+  - title: "Considérations sur le Coût de la Vie"
+    subTitle: "Informations sur les coûts de la vie dans divers pays pour aider à la planification financière."
+  - title: "Vie Académique"
+    subTitle: "Un aperçu de la vie académique des étudiants doctorants, y compris les collaborations de recherche et les opportunités de réseautage."
+tableData:
+  - feature: ["Ressource", "Détails"]
+    description:
+      - ["Universités", "Informations sur les établissements proposant des programmes doctoraux à l'échelle mondiale."]
+      - ["Financement", "Détails sur l'aide financière et les bourses spécifiquement destinées aux études doctorales."]
+      - ["Coûts de la Vie", "Conseils sur la budgétisation et les dépenses de vie pendant la poursuite de votre doctorat."]
+      - ["Opportunités de Recherche", "Aperçus des postes et projets de recherche disponibles."]
+      - ["Conseils de Candidature", "Meilleures pratiques pour rédiger des propositions de recherche réussies."]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/B2.jpeg"
 ---

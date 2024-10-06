@@ -1,55 +1,53 @@
 ---
-title: "SF-FN F303"
-description: "Hex Bolts"
+title: "Vocational and Technical Programs Abroad"
+description: "Your Guide to Practical Skills and Career Readiness"
 main:
-  id: 4
+  id: 5
   content: |
-    Introducing the SF-FN F303 Hex Bolts – the perfect choice for heavy-duty fastening applications. Crafted with precision and durability in mind, these hex bolts provide the strength and reliability you need for your toughest projects.
-  imgCard: "@/images/product-image-4.avif"
-  imgMain: "@/images/product-image-main-4.avif"
-  imgAlt: "Mockup boxes of hex bolts"
+    Welcome to your essential guide to vocational and technical programs abroad. This resource is designed for students seeking practical, hands-on education in various trades and technical fields, providing crucial information on program offerings, application processes, and essential tips for career success.
+  imgCard: "@/images/voc1.jpg" 
+  imgMain: "@/images/voc1.jpg" 
+  imgAlt: "Mockup of vocational program resources"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
-    title: "Description"
+    title: "Overview"
   - id: "tabs-with-card-item-2"
     dataTab: "#tabs-with-card-2"
-    title: "Specifications"
+    title: "Key Programs"
   - id: "tabs-with-card-item-3"
     dataTab: "#tabs-with-card-3"
-    title: "Blueprints"
+    title: "Financial Aid"
 longDescription:
-  title: "Heavy-Duty Fastening Solutions"
+  title: "Comprehensive Guide to Vocational and Technical Programs"
   subTitle: |
-    The SF-FN F303 Hex Bolts are designed to handle the toughest fastening challenges with ease. Whether you're working on construction projects or heavy machinery, these hex bolts deliver the strength and reliability you need.
-  btnTitle: "Contact sales to learn more"
+    Our guide to vocational and technical programs abroad provides invaluable insights for students interested in developing practical skills for the workforce. With detailed information on various programs, institutions, and funding options, you’ll be well-prepared to advance your career.
+  btnTitle: "Contact us for more information"
   btnURL: "#"
 descriptionList:
-  - title: "Strength and Durability"
-    subTitle: "Constructed from high-quality materials, these hex bolts are built to withstand heavy loads and tough conditions."
-  - title: "Precision Engineering"
-    subTitle: "Engineered with precision-cut threads and exact specifications, ensuring a tight and secure fit every time."
-  - title: "Versatility"
-    subTitle: "Suitable for a wide range of applications, from construction to machinery, providing versatile fastening solutions."
+  - title: "Diverse Program Offerings"
+    subTitle: "Explore a wide range of vocational and technical programs in fields like healthcare, engineering, information technology, and skilled trades."
+  - title: "Application Process Made Easy"
+    subTitle: "Receive step-by-step guidance on application requirements, including necessary documents and deadlines."
+  - title: "Financial Support Options"
+    subTitle: "Learn about scholarships and funding opportunities available for international vocational students."
 specificationsLeft:
-  - title: "Material"
-    subTitle: "Made from premium-grade steel or alloy, offering exceptional strength and corrosion resistance."
-  - title: "Thread Design"
-    subTitle: "Precision-cut threads ensure optimal grip and reliability, even in high-stress environments."
-  - title: "Quantity"
-    subTitle: "Each set includes a sufficient quantity of hex bolts to tackle various projects and applications."
-  - title: "Sizes"
-    subTitle: "Available in a range of sizes to accommodate different project requirements, ensuring versatility and compatibility."
-specificationsRight:
-  - title: "Finish"
-    subTitle: "Finished with a protective coating to enhance corrosion resistance and extend service life."
-  - title: "Load Capacity"
-    subTitle: "Designed to meet or exceed industry standards for load-bearing capacity, ensuring reliable performance under heavy loads."
-  - title: "Certifications"
-    subTitle: "Compliant with relevant industry standards and certifications, guaranteeing quality and reliability."
-  - title: "Applications"
-    subTitle: "Ideal for use in construction, machinery, automotive, and other heavy-duty applications that demand strong and reliable fastening."
+  - title: "Industry-Driven Curriculum"
+    subTitle: "Understand the curriculum designed to meet current industry standards and workforce needs."
+  - title: "Hands-On Training"
+    subTitle: "Discover programs that emphasize practical experience, preparing you for immediate employment."
+  - title: "Cost of Living Considerations"
+    subTitle: "Get insights into living expenses in various countries to help plan your finances effectively."
+  - title: "Career Support Services"
+    subTitle: "An overview of services available to assist students in finding internships and job placements."
+tableData:
+  - feature: ["Resource", "Details"]
+    description:
+      - ["Vocational Programs", "Information on various vocational and technical programs offered by institutions worldwide."]
+      - ["Scholarships", "Comprehensive details on financial aid options for vocational studies."]
+      - ["Cost of Living", "Guidance on budgeting and living expenses while studying abroad."]
+      - ["Internship Opportunities", "Insights into available internships and work placements."]
+      - ["Application Strategies", "Expert tips for crafting successful vocational program applications."]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"  
+  first: "@/images/doc1.jpeg"
 ---

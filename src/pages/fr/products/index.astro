@@ -11,7 +11,7 @@ import TestimonialsSectionAlt from "@components/sections/testimonials/Testimonia
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-// Fetching all the product related content and sorting it by main.id
+// Fetching all the program-related content and sorting it by main.id
 const product: CollectionEntry<"products">[] = (
   await getCollection("products", ({ id }) => {
     return id.startsWith("fr/");
@@ -22,61 +22,61 @@ const product: CollectionEntry<"products">[] = (
 );
 
 // Define variables for page content
-const title: string = "Produits";
+const title: string = "Programmes";
 const subTitle: string =
-  "Explorez la durabilité et la précision des outils ScrewFast, conçus aussi bien pour les professionnels que pour les amateurs. Chacun de nos produits est fabriqué avec précision et conçu pour durer, garantissant que vous disposez du bon outil pour chaque tâche.";
+  "Découvrez les diverses opportunités d'enseignement supérieur à l'étranger, conçues pour donner du pouvoir aux étudiants de tous horizons. Chaque programme est conçu pour fournir les connaissances et les compétences nécessaires pour réussir dans un environnement mondial.";
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
   {
     content:
-      "Depuis que nous avons adopté les outils matériels de ScrewFast, l'efficacité sur nos chantiers de construction a explosé. La durabilité des boulons hexagonaux et la précision des vis machine sont tout simplement inégalées. C'est rafraîchissant de travailler avec une entreprise qui comprend vraiment les exigences quotidiennes de l'industrie.",
-    author: "Jason Clark",
-    role: "Contremaître de chantier | TopBuild",
+      "Étudier à l'étranger a transformé mon parcours académique. Les ressources et le soutien offerts par BookEducation ont été inestimables pour naviguer dans les complexités de l'enseignement international. J'ai maintenant une perspective globale qui enrichit mes études.",
+    author: "Emily Johnson",
+    role: "Étudiante | Université de Londres",
     avatarSrc:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    avatarAlt: "Description de l'image",
+    avatarAlt: "Emily Johnson",
   },
 
   {
     content:
-      "En tant que designer d'intérieur, je suis toujours à la recherche de matériaux et d'outils de haute qualité qui m'aident à donner vie à mes visions. L'assortiment de vis mixtes de ScrewFast a révolutionné mes projets, offrant le mélange parfait de qualité et de variété. Le support client exceptionnel était la cerise sur le gâteau !",
-    author: "Maria Gonzalez",
-    role: "Designer d'intérieur | Creative Spaces",
+      "L'orientation que j'ai reçue de BookEducation a rendu ma transition vers l'étude à l'étranger fluide. J'ai pu choisir le bon programme en fonction de mes objectifs professionnels, et le personnel de soutien était toujours là pour aider.",
+    author: "Carlos Mendez",
+    role: "Étudiant diplômé | Université de Melbourne",
     avatarSrc:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    avatarAlt: "Description de l'image",
+    avatarAlt: "Carlos Mendez",
   },
 
   {
     content:
-      "Je suis menuisier professionnel depuis plus de 15 ans, et je peux sincèrement dire que les boulons et écrous à tarauder de ScrewFast sont parmi les meilleurs que j'ai utilisés. Ils adhèrent comme aucun autre, et j'ai une confiance totale dans chaque joint et élément. De plus, le service est impeccable - ils se soucient vraiment du succès de mon projet.",
-    author: "Richard Kim",
-    role: "Menuisier-Maître | WoodWright",
+      "En tant qu'étudiante de première génération, j'étais nerveuse à l'idée d'étudier à l'étranger. Cependant, le soutien et les ressources offerts par BookEducation m'ont donné la confiance nécessaire pour poursuivre mes rêves. Je recommande vivement leurs services !",
+    author: "Fatima Ali",
+    role: "Étudiante de premier cycle | Université de Toronto",
     avatarSrc:
       "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    avatarAlt: "Description de l'image",
+    avatarAlt: "Fatima Ali",
   },
 ];
 ---
 
 <MainLayout
-  title="Produits | ScrewFast"
+  title="Programmes | BookEducation"
   lang="fr"
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/fr/products",
-    url: "https://screwfast.uk/fr/products",
-    name: "Outils Matériels | ScrewFast",
+    "@id": "https://bookeducation.com/fr/programmes",
+    url: "https://bookeducation.com/fr/programmes",
+    name: "Programmes d'enseignement supérieur | BookEducation",
     description:
-      "Explorez la durabilité et la précision des outils ScrewFast, conçus aussi bien pour les professionnels que pour les passionnés.",
+      "Découvrez des opportunités variées pour l'enseignement supérieur à l'étranger, conçues pour donner du pouvoir aux étudiants et fournir les compétences nécessaires pour réussir à l'échelle mondiale.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk/fr",
-      name: "ScrewFast",
+      url: "https://bookeducation.com/fr",
+      name: "BookEducation",
       description:
-        "ScrewFast propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
+        "BookEducation propose des conseils de premier ordre et des services d'expertise pour aider les étudiants à exceller dans leur parcours d'enseignement supérieur à l'étranger.",
     },
     inLanguage: "fr",
   }}
@@ -100,13 +100,13 @@ const testimonials = [
         }
       </div>
       <PrimaryCTA
-        title="Histoires de clients"
+        title="Histoires de succès d'étudiants"
         url="#testimonials"
         noArrow={true}
       />
     </div>
-    <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
-    <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
+    <!--Displaying programs in alternating styles. Alternative program gets different card styling.-->
+    <!--Maps through all program entries and displays them with either CardSmall or CardWide based on their position.-->
     <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
       {
         product.map((product, index) => {
@@ -122,17 +122,17 @@ const testimonials = [
   </div>
   <!--Features statistics section-->
   <FeaturesStatsAlt
-    title="Pourquoi choisir ScrewFast ?"
-    subTitle="Transformez vos idées en résultats tangibles avec les outils ScrewFast. Que vous commenciez par un croquis sur un coin de table ou plongiez dans un projet de construction complet, nos outils sont conçus pour vous aider à construire en toute confiance."
+    title="Pourquoi choisir BookEducation ?"
+    subTitle="Transformez vos rêves académiques en réalité avec BookEducation. Que vous planifiez votre première expérience d'étude à l'étranger ou que vous cherchiez à élargir vos horizons mondiaux, nous sommes là pour vous aider à réussir."
     benefits={[
-      "Outils robustes et fiables pour des performances durables.",
-      "Solutions innovantes adaptées aux besoins de construction modernes.",
-      "Support client dédié au succès de votre projet.",
+      "Conseils d'experts sur le choix des programmes et les processus de candidature.",
+      "Ressources complètes pour les étudiants internationaux.",
+      "Soutien dédié d'experts tout au long de votre parcours.",
     ]}
   />
   <!--Testimonials section-->
   <TestimonialsSectionAlt
-    title="Ce que disent nos clients"
+    title="Ce que nos étudiants disent"
     testimonials={testimonials}
   />
 </MainLayout>

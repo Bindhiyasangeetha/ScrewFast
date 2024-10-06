@@ -1,67 +1,135 @@
 ---
-// Import necessary components, modules, and types
+// Import necessary components, modules and types
 import MainLayout from "@/layouts/MainLayout.astro";
 import CardBlog from "@components/ui/cards/CardBlog.astro";
 import CardBlogRecent from "@components/ui/cards/CardBlogRecent.astro";
 import CardInsight from "@components/ui/cards/CardInsight.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import CardSmall from "@components/ui/cards/CardSmall.astro";
+import CardWide from "@components/ui/cards/CardWide.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+import SearchBar from "@components/ui/SearchBar.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
-// Get all blog posts in English and sort them based on publish date
-const englishBlogEntries = await getCollection("blog", ({ id }) => {
-  return id.startsWith("en/");
+// Get all blogs post in French and sort them based on publish date
+
+const frenchBlogEntries = await getCollection("blog", ({ id }) => {
+  return id.startsWith("fr/");
 });
 
-const englishInsightsEntries = await getCollection("insights", ({ id }) => {
-  return id.startsWith("en/");
+const frenchInsightsEntries = await getCollection("insights", ({ id }) => {
+  return id.startsWith("fr/");
 });
 
-const blogPosts: CollectionEntry<"blog">[] = englishBlogEntries.sort(
+const blogPosts: CollectionEntry<"blog">[] = frenchBlogEntries.sort(
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-
 // Get all insights posts
-const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
+const insightPosts: CollectionEntry<"insights">[] = frenchInsightsEntries;
 
 // Separate the most recent post from others
 const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
 const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 
-// Define variables for page content
-const title: string = "Your Gateway to Higher Education";
-const subTitle: string =
-  "Explore the latest news, tips, and analyses from YourWebsite to enhance your study abroad journey. From product highlights to strategic advice, our blog is your go-to resource for all things related to higher education abroad.";
-const secondTitle: string = "Insights";
-const secondSubTitle: string =
-  "Stay updated with the latest trends and developments in the field of higher education through analyses from the YourWebsite expert team.";
+// Fetching all the program-related content and sorting it by main.id
+const product: CollectionEntry<"products">[] = (
+  await getCollection("products", ({ id }) => {
+    return id.startsWith("fr/");
+  })
+).sort(
+  (a: CollectionEntry<"products">, b: CollectionEntry<"products">) =>
+    a.data.main.id - b.data.main.id
+);
 
+// Initialize search query
+let query = "";
+
+// Function to handle search query updates
+function handleSearch(newQuery) {
+  query = newQuery.toLowerCase();
+}
+
+// Filter posts based on search query
+const filteredPosts = otherPosts.filter((post) =>
+  post.data.title.toLowerCase().includes(query)
+);
+
+// Define variables for page content
+const title: string = "Votre Passerelle vers l'Excellence dans l'Enseignement Supérieur à l'Étranger";
+const subTitle: string =
+  "Explorez les dernières actualités, astuces et analyses pour améliorer votre parcours d'études à l'étranger. Des mises en avant de programmes aux stratégies pour réussir académiquement, notre blog est votre ressource incontournable pour tout ce qui concerne l'enseignement supérieur à l'étranger.";
+const secondTitle: string = "Perspectives";
+const secondSubTitle: string =
+  "Restez à jour avec les dernières tendances et évolutions de l'éducation internationale, grâce aux analyses de notre équipe d'experts.";
+  const producttitle: string = "Programmes";
+const productsubTitle: string =
+  "Découvrez les diverses opportunités d'enseignement supérieur à l'étranger, conçues pour donner du pouvoir aux étudiants de tous horizons. Chaque programme est conçu pour fournir les connaissances et les compétences nécessaires pour réussir dans un environnement mondial.";
+// Testimonial data that will be rendered in the component
+const testimonials = [
+  {
+    content:
+      "Étudier à l'étranger a transformé mon parcours académique. Les ressources et le soutien offerts par BookEducation ont été inestimables pour naviguer dans les complexités de l'enseignement international. J'ai maintenant une perspective globale qui enrichit mes études.",
+    author: "Emily Johnson",
+    role: "Étudiante | Université de Londres",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Emily Johnson",
+  },
+
+  {
+    content:
+      "L'orientation que j'ai reçue de BookEducation a rendu ma transition vers l'étude à l'étranger fluide. J'ai pu choisir le bon programme en fonction de mes objectifs professionnels, et le personnel de soutien était toujours là pour aider.",
+    author: "Carlos Mendez",
+    role: "Étudiant diplômé | Université de Melbourne",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Carlos Mendez",
+  },
+
+  {
+    content:
+      "En tant qu'étudiante de première génération, j'étais nerveuse à l'idée d'étudier à l'étranger. Cependant, le soutien et les ressources offerts par BookEducation m'ont donné la confiance nécessaire pour poursuivre mes rêves. Je recommande vivement leurs services !",
+    author: "Fatima Ali",
+    role: "Étudiante de premier cycle | Université de Toronto",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Fatima Ali",
+  },
+];
 const pageTitle: string = `Blog | ${SITE.title}`;
 ---
 
-<MainLayout lang="en"
+<MainLayout lang="fr"
   title={pageTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://yourwebsite.com/blog",
-    "url": "https://yourwebsite.com/blog",
-    "name": "Blog | YourWebsite",
-    "description": "Stay informed about the latest trends and developments in higher education abroad with insights from the YourWebsite expert team.",
+    "@id": "https://screwfast.uk/fr/blog",
+    "url": "https://screwfast.uk/fr/blog",
+    "name": "Blog | BookEducation",
+    "description": "Restez à jour avec les dernières tendances et évolutions de l'éducation internationale, grâce aux analyses de notre équipe d'experts.",
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://yourwebsite.com",
-      "name": "YourWebsite",
-      "description": "YourWebsite offers top-notch resources and expert guidance to meet all your study abroad needs."
+      "url": "https://screwfast.uk/fr",
+      "name": "BookEducation",
+      "description": "BookEducation propose des conseils de premier ordre et des services d'experts pour vous aider à exceller dans votre parcours d'enseignement supérieur à l'étranger."
     },
-    "inLanguage": "en"
+    "inLanguage": "fr"
   }}
 >
+  <!-- Search Bar -->
+  <section class="pt-8">
+    <SearchBar query={query} handleSearch={handleSearch} />
+  </section>
+  
   <section
     class="mx-auto max-w-[85rem] space-y-8 px-4 pt-16 sm:px-6 lg:px-8 2xl:max-w-full"
   >
-    <!-- Page header -->
+    <!--Page header-->
     <div class="mx-auto max-w-3xl text-left sm:text-center">
       <h1
         class="block text-balance text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
@@ -80,20 +148,72 @@ const pageTitle: string = `Blog | ${SITE.title}`;
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
-    <!-- Blog posts grid -->
+    <!--Blog posts grid-->
     <div class="grid gap-6 lg:grid-cols-2">
-      {otherPosts.map((blogEntry) => <CardBlog blogEntry={blogEntry} blogLocale="en"/>)}
+      {otherPosts.map((blogEntry) => <CardBlog blogEntry={blogEntry} blogLocale="fr"/>)}
     </div>
   </section>
-
-  <!-- Most recent blog post -->
+  <!--Most recent blog post-->
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
-    <CardBlogRecent blogEntry={mostRecentPost} recentBlogLocale="en" />
+    <CardBlogRecent blogEntry={mostRecentPost} recentBlogLocale="fr" />
   </section>
-
-  <!-- Insights section -->
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+      <PrimaryCTA
+        title="Histoires de succès d'étudiants"
+        url="#testimonials"
+        noArrow={true}
+      />
+    </div>
+    <!--Displaying programs in alternating styles. Alternative program gets different card styling.-->
+    <!--Maps through all program entries and displays them with either CardSmall or CardWide based on their position.-->
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+      {
+        product.map((product, index) => {
+          const position = index % 4;
+          if (position === 0 || position === 3) {
+            return <CardSmall product={product} productLocale="fr" />;
+          } else {
+            return <CardWide product={product} productLocale="fr" />;
+          }
+        })
+      }
+    </section>
+  </div>
+  <!--Features statistics section-->
+  <FeaturesStatsAlt
+    title="Pourquoi choisir BookEducation ?"
+    subTitle="Transformez vos rêves académiques en réalité avec BookEducation. Que vous planifiez votre première expérience d'étude à l'étranger ou que vous cherchiez à élargir vos horizons mondiaux, nous sommes là pour vous aider à réussir."
+    benefits={[
+      "Conseils d'experts sur le choix des programmes et les processus de candidature.",
+      "Ressources complètes pour les étudiants internationaux.",
+      "Soutien dédié d'experts tout au long de votre parcours.",
+    ]}
+  />
+  <!--Testimonials section-->
+  <TestimonialsSectionAlt
+    title="Ce que nos étudiants disent"
+    testimonials={testimonials}
+  />
+  <!--Insights section-->
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
@@ -110,7 +230,7 @@ const pageTitle: string = `Blog | ${SITE.title}`;
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         insightPosts.map((insightEntry) => (
-          <CardInsight insightEntry={insightEntry} insightLocale="en" />
+          <CardInsight insightEntry={insightEntry} insightLocale="fr" />
         ))
       }
     </div>

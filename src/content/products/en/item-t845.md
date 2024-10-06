@@ -1,55 +1,53 @@
 ---
-title: "SF-TB T845"
-description: "Machine Screws"
+title: "Online and Distance Learning Programs"
+description: "Flexible Learning Options for Your Academic Journey"
 main:
   id: 1
   content: |
-    Introducing the SF-TB T845 – your go-to solution for precision fastening in machinery and equipment. This comprehensive set of machine screws is meticulously crafted to meet the stringent demands of industrial applications, ensuring secure and reliable fastening.
-  imgCard: "@/images/product-image-1.avif"
-  imgMain: "@/images/product-image-main-1.avif"
-  imgAlt: "Mockup boxes of machine screws set"
+    Introducing our comprehensive guide to Online and Distance Learning Programs – designed to provide you with the flexibility and accessibility needed to pursue your academic goals from anywhere in the world. Explore various online degree offerings, learning platforms, and essential resources to succeed in your studies.
+  imgCard: "@/images/dis.jpeg"
+  imgMain: "@/images/dis.jpeg"
+  imgAlt: "Mockup of online learning resources"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
-    title: "Description"
+    title: "Overview"
   - id: "tabs-with-card-item-2"
     dataTab: "#tabs-with-card-2"
-    title: "Specifications"
+    title: "Available Programs"
   - id: "tabs-with-card-item-3"
     dataTab: "#tabs-with-card-3"
-    title: "Blueprints"
+    title: "Success Tips"
 longDescription:
-  title: "Precision Fastening Solutions"
+  title: "Empowering Your Education"
   subTitle: |
-    The SF-TB T845 Machine Screws offer unparalleled precision and reliability for industrial applications, ensuring seamless operation and longevity for your machinery and equipment.
-  btnTitle: "Contact sales to learn more"
+    Our guide to Online and Distance Learning Programs offers valuable insights into flexible education options. With detailed information on universities, program offerings, and tips for effective online learning, you'll be well-equipped to thrive in a virtual classroom environment.
+  btnTitle: "Contact us for more information"
   btnURL: "#"
 descriptionList:
-  - title: "Durability"
-    subTitle: "Crafted from high-quality materials, these machine screws are built to withstand the rigors of industrial environments."
-  - title: "Precision Engineering"
-    subTitle: "Engineered with precision-cut threads and exact specifications, ensuring a tight and secure fit for every application."
-  - title: "Versatility"
-    subTitle: "Suitable for a wide range of machinery and equipment, providing versatile fastening solutions for various industrial needs."
+  - title: "Diverse Program Offerings"
+    subTitle: "Explore a wide range of online programs across various disciplines, from arts to technology."
+  - title: "Flexible Learning"
+    subTitle: "Learn at your own pace with self-paced courses and scheduled classes to fit your lifestyle."
+  - title: "Resource Accessibility"
+    subTitle: "Access essential learning resources, including online libraries, forums, and academic support."
 specificationsLeft:
-  - title: "Material Composition"
-    subTitle: "Constructed from premium-grade steel or alloy for exceptional strength and durability."
-  - title: "Surface Finish"
-    subTitle: "Finished with a protective coating to enhance corrosion resistance and extend service life."
-  - title: "Quantity Per Set"
-    subTitle: "Each set contains a comprehensive assortment of machine screws to meet diverse industrial requirements."
-  - title: "Size Range"
-    subTitle: "Available in various sizes and lengths to accommodate different machinery and equipment specifications."
-specificationsRight:
-  - title: "Thread Specifications"
-    subTitle: "Precision-engineered threads ensure optimal grip and reliability, even in high-vibration environments."
-  - title: "Load Capacity"
-    subTitle: "Designed to meet or exceed industry standards for load-bearing capacity, ensuring safe and reliable operation."
-  - title: "Certifications"
-    subTitle: "Compliant with relevant industry standards and certifications, guaranteeing quality and reliability."
-  - title: "Applications"
-    subTitle: "Ideal for use in a wide range of industrial machinery, equipment, and assemblies that demand precise and secure fastening."
+  - title: "Technology Requirements"
+    subTitle: "Get to know the technical requirements for participating in online courses, including software and hardware needs."
+  - title: "Support Services"
+    subTitle: "Learn about the various support services available for online learners, including academic advising and tech support."
+  - title: "Networking Opportunities"
+    subTitle: "Discover how to network and connect with fellow students and professionals in your field through virtual platforms."
+  - title: "Career Advancement"
+    subTitle: "Understand how online learning can enhance your career prospects and skills in a competitive job market."
+tableData:
+  - feature: ["Resource", "Details"]
+    description:
+      - ["Online Programs", "Information on institutions offering diverse online learning programs worldwide."]
+      - ["Learning Platforms", "Comprehensive details on the most popular and effective online learning platforms."]
+      - ["Success Strategies", "Best practices for succeeding in online and distance learning environments."]
+      - ["Technology Support", "Guidance on technology tools and resources to enhance your online learning experience."]
+      - ["Certification Opportunities", "Information on certifications and credentials available through online programs."]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"   
+  first: "@/images/edu-1.jpg"
 ---

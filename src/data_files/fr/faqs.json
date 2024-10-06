@@ -1,29 +1,29 @@
 {
-  "subTitle": "Posez-nous toutes vos questions sur notre marque et nos produits, et obtenez des réponses factuelles.",
+  "subTitle": "Posez-nous toutes vos questions sur les études à l'étranger et nos services éducatifs.",
   "faqs": [
     {
-      "question": "Quels types d'outils sont inclus dans le Kit de Démarrage?",
-      "answer": "Le Kit de Démarrage comprend des outils à main et électriques essentiels pour différents projets de bricolage, notamment des marteaux, des perceuses, des tournevis et une variété de fixations. C'est une sélection soigneusement élaborée pour aider les débutants et les bricoleurs expérimentés à aborder la plupart des tâches d'amélioration de l'habitat."
+      "question": "Dans quelles destinations proposez-vous un accompagnement pour étudier à l'étranger ?",
+      "answer": "Nous offrons des conseils pour étudier dans des destinations de premier choix telles que les États-Unis, le Royaume-Uni, l'Australie et bien d'autres. Nos services couvrent une large gamme d'universités et de programmes dans ces régions."
     },
     {
-      "question": "Puis-je passer du Kit de Démarrage à la Boîte à Outils Professionnelle?",
-      "answer": "Absolument ! Vous pouvez passer à la Boîte à Outils Professionnelle à tout moment pour accéder à une gamme plus large d'outils de haute qualité, bénéficier d'un support client prioritaire et recevoir un contenu exclusif. Contactez notre équipe de support pour une transition sans problème."
+      "question": "Comment vous assistez-vous dans le processus de candidature ?",
+      "answer": "Nous fournissons une assistance complète pour les candidatures universitaires, y compris la préparation des documents, la soumission des candidatures et les conseils pour les entretiens. Nos consultants experts veillent à ce que votre candidature se démarque."
     },
     {
-      "question": "Quels sont les rabais disponibles pour les commandes en gros via le plan Boîte à Outils Professionnelle?",
-      "answer": "Les membres de la Boîte à Outils Professionnelle ont droit à des rabais exclusifs sur les commandes en gros, dont le pourcentage peut varier en fonction du volume de la commande. Contactez-nous pour discuter de vos besoins, et nous vous fournirons une structure de rabais personnalisée."
+      "question": "Quels types de bourses sont disponibles pour les étudiants internationaux ?",
+      "answer": "Nous aidons les étudiants à trouver et à postuler pour diverses bourses basées sur le mérite, les besoins et des programmes spécifiques. Qu'il s'agisse de bourses gouvernementales, universitaires ou privées, nous identifions les meilleures options."
     },
     {
-      "question": "À quoi puis-je m'attendre en termes de support client?",
-      "answer": "Tous nos clients bénéficient d'un support par e-mail dédié. Avec le Kit de Démarrage, vous recevrez notre support standard, tandis que le plan Boîte à Outils Professionnelle vous mettra à niveau vers un support prioritaire, ce qui signifie des temps de réponse plus rapides et une assistance spécialisée."
+      "question": "Quel type de soutien proposez-vous après mon admission ?",
+      "answer": "Nos services vont au-delà du processus d'admission. Nous aidons à la demande de visa, aux briefings avant le départ et à la recherche de logement. Notre soutien garantit que vous êtes entièrement préparé pour votre voyage."
     },
     {
-      "question": "À quelle fréquence sont mises à jour les ressources en ligne et les tutoriels?",
-      "answer": "Nous mettons régulièrement à jour nos ressources en ligne et nos tutoriels pour refléter les dernières tendances en matière de bricolage et de construction, ainsi que les introductions de nouveaux outils et techniques. Notre matériel vise à être complet et convivial pour tous les niveaux de compétence."
+      "question": "Proposez-vous des services de préparation aux tests pour l'IELTS, le TOEFL ou le GRE ?",
+      "answer": "Oui, nous offrons des ressources de préparation aux tests pour l'IELTS, le TOEFL, le GRE et d'autres tests standardisés requis pour étudier à l'étranger. Nous fournissons des supports d'étude, des tests pratiques et des conseils d'experts pour vous aider à obtenir votre meilleur score."
     },
     {
-      "question": "ScrewFast propose-t-il des services pour les grands projets de construction?",
-      "answer": "Oui, nos Solutions Entreprise sont conçues pour les grandes entreprises ayant besoin de services complets. Nous fournissons des consultations, de la planification et de l'approvisionnement en outils et matériaux de haute qualité, ainsi que des solutions de personnel pour des besoins de construction importants. Contactez-nous pour un devis personnalisé."
+      "question": "Pouvez-vous m'aider avec les options de travail après les études ?",
+      "answer": "Absolument ! Nous fournissons des informations sur les opportunités de travail après les études dans divers pays, y compris des informations sur les visas et des stratégies de recherche d'emploi. Notre objectif est de vous aider à trouver un emploi après avoir terminé vos études."
     }
   ]
 }

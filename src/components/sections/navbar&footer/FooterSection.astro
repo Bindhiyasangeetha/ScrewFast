@@ -1,5 +1,5 @@
 ---
-// Import the necessary dependencies
+/* Importation des dépendances nécessaires */
 import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
 import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro";
 import enStrings from "@utils/navigation.ts";
@@ -8,14 +8,14 @@ import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
 
-// Select the correct translation based on the page's lang prop:
+/* Sélection de la traduction appropriée en fonction de la propriété lang de la page */
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 
-// Define the variables that will be used in this component
-const sectionThreeTitle: string = Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
-const sectionThreeContent: string = Astro.currentLocale === "fr" ? "Restez informé des derniers outils et des offres exclusives." :
+/* Définition des variables utilisées dans ce composant */
+const titreSectionTrois: string = Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
+const contenuSectionTrois: string = Astro.currentLocale === "fr" ? "Restez informé des derniers outils et des offres exclusives." :
   "Stay updated with the latest tools and exclusive deals.";
-const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
+const fabriqué: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -24,10 +24,10 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
   >
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
-        <!-- Brand Logo -->
+        <!-- Logo de la marque -->
         <BrandLogo class="h-auto w-32" />
       </div>
-      <!-- An array of links for Product and Company sections -->
+      <!-- Un tableau de liens pour les sections Produit et Entreprise -->
       {
         strings.footerLinks.map((section) => (
           <div class="col-span-1">
@@ -45,7 +45,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
                   </a>
                   {section.section === "Company" && index === 2 ? (
                     <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">
-                      We're hiring!
+                      Nous recrutons !
                     </span>
                   ) : null}
                 </li>
@@ -57,13 +57,13 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
 
       <div class="col-span-2">
         <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
-          {sectionThreeTitle}
+          {titreSectionTrois}
         </h3>
 
         <form>
           <EmailFooterInput />
           <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-            {sectionThreeContent}
+            {contenuSectionTrois}
           </p>
         </form>
       </div>
@@ -74,7 +74,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
     >
       <div class="flex items-center justify-between">
         <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          © <span id="current-year"></span> {SITE.title}. {crafted}
+          © <span id="current-year"></span> {SITE.title}. {fabriqué}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
             href="https://sobstvennoai.dev"
@@ -84,7 +84,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
         </p>
       </div>
 
-      <!-- Social Brands -->
+      <!-- Marques sociales -->
       <div>
         <FooterSocialLink url={strings.socialLinks.facebook}
           ><Icon name="facebookFooter" />

@@ -1,54 +1,53 @@
 ---
-title: "SF-AB A765"
-description: "Assorted Screw Set" 
+title: "Exploring Graduate Programs Abroad"
+description: "Your Gateway to International Graduate Studies"
 main:
   id: 2
   content: |
-    Introducing the SF-AB A765 Assorted Screw Set – the ultimate solution for your screw fastening needs. This comprehensive set includes a wide variety of screws meticulously curated to tackle various projects with ease and precision.
-  imgCard: "@/images/product-image-2.avif"
-  imgMain: "@/images/product-image-main-2.avif"
-  imgAlt: "Mockup boxes of assorted screw set"
+    Welcome to your essential guide to exploring graduate programs abroad. This resource is designed for students seeking advanced degrees in international settings, providing critical information on various graduate programs, application processes, and essential tips to help you succeed in your academic journey.
+  imgCard: "@/images/blog5.jpeg" 
+  imgMain: "@/images/blog5.jpeg" 
+  imgAlt: "Mockup of graduate education resources"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
-    title: "Description"
+    title: "Overview"
   - id: "tabs-with-card-item-2"
     dataTab: "#tabs-with-card-2"
-    title: "Specifications"
+    title: "Key Graduate Programs"
   - id: "tabs-with-card-item-3"
     dataTab: "#tabs-with-card-3"
-    title: "Blueprints"
+    title: "Scholarships"
 longDescription:
-  title: "Versatile Screw Fastening Solutions"
+  title: "Comprehensive Guide to Graduate Studies Abroad"
   subTitle: |
-    The SF-AB A765 Assorted Screw Set offers unmatched versatility and convenience, making it the perfect choice for DIY enthusiasts and professionals alike. With a comprehensive selection of screws, you'll always have the right fastener for the job.
-  btnTitle: "Contact sales to learn more"
+    Our guide to graduate programs abroad offers invaluable insights and resources tailored for students considering further education. With in-depth information on universities, various graduate disciplines, and funding options, you'll be well-equipped for a successful academic pursuit.
+  btnTitle: "Contact us for more information"
   btnURL: "#"
 descriptionList:
-  - title: "Wide Variety"
-    subTitle: "Includes a diverse range of screw types and sizes to accommodate various applications and materials."
-  - title: "Ease of Use"
-    subTitle: "Each screw is designed for effortless installation, ensuring hassle-free fastening every time."
-  - title: "Convenience"
-    subTitle: "Eliminates the need for multiple trips to the hardware store, saving time and effort on your projects."
+  - title: "Diverse Graduate Programs"
+    subTitle: "Explore a wide range of graduate programs across disciplines, from business to science and the arts."
+  - title: "Application Process Made Easy"
+    subTitle: "Detailed guidance on application requirements, including necessary documents and timelines."
+  - title: "Financial Support Options"
+    subTitle: "Learn about scholarships and funding opportunities available for international graduate students."
 specificationsLeft:
-  - title: "Material"
-    subTitle: "Constructed from high-quality materials such as stainless steel, ensuring durability and corrosion resistance."
-  - title: "Assortment"
-    subTitle: "Contains a generous assortment of screws, including wood screws, machine screws, and sheet metal screws."
-  - title: "Quantity"
-    subTitle: "Each set includes a sufficient quantity of screws to handle a wide range of projects and tasks."
-  - title: "Sizes"
-    subTitle: "Available in various sizes to suit different project requirements, ensuring compatibility and versatility."
+  - title: "Cultural Insights"
+    subTitle: "Understand the cultural nuances of studying in different countries and how they impact your education."
+  - title: "Student Support Services"
+    subTitle: "Discover various support services for graduate students, including mentorship and career counseling."
+  - title: "Living Expenses Overview"
+    subTitle: "Get an insight into the cost of living in various countries to help plan your finances effectively."
+  - title: "Graduate Student Life"
+    subTitle: "An overview of life as a graduate student, including networking, professional development, and community involvement."
 tableData:
-  - feature: ["Specification", "Value"]
+  - feature: ["Resource", "Details"]
     description:
-      - ["Length (mm)", "Various"]
-      - ["Weight (g)", "N/A"]
-      - ["Material", "Stainless Steel"]
-      - ["Finish", "Assorted"]
-      - ["Package Contents", "Various screws in a set"]
+      - ["Graduate Programs", "Information on various graduate programs offered by top universities worldwide."]
+      - ["Scholarships", "Comprehensive details on financial aid options for graduate studies."]
+      - ["Cost of Living", "Guidance on budgeting and living expenses while studying abroad."]
+      - ["Cultural Adjustment", "Strategies for adapting to a new academic and cultural environment."]
+      - ["Application Strategies", "Expert tips for crafting competitive graduate applications."]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/B1.jpeg"
 ---

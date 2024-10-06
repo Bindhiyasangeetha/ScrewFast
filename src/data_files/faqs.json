@@ -1,29 +1,29 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Ask us anything about studying abroad and our education services.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What destinations do you provide support for studying abroad?",
+      "answer": "We offer guidance for studying in top destinations such as the United States, the United Kingdom, Australia, and more. Our services cover a wide range of universities and programs in these regions."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "How do you assist with the application process?",
+      "answer": "We provide comprehensive assistance with university applications, including document preparation, application submission, and interview guidance. Our expert consultants will help ensure your application stands out."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "What types of scholarships are available for international students?",
+      "answer": "We guide students in finding and applying for various scholarships based on merit, need, and specific programs. Whether it's government, university, or private scholarships, we help identify the best options."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "What kind of support do you offer after I get admitted?",
+      "answer": "Our services extend beyond the admission process. We assist with visa applications, pre-departure briefings, and finding accommodation. Our support ensures you're fully prepared for your journey."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "Do you offer any test preparation services for IELTS, TOEFL, or GRE?",
+      "answer": "Yes, we offer test preparation resources for IELTS, TOEFL, GRE, and other standardized tests required for studying abroad. We provide study materials, practice tests, and expert guidance to help you achieve your best score."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "Can you help with post-study work options?",
+      "answer": "Absolutely! We provide insights on post-study work opportunities in various countries, including visa information and job search strategies. Our goal is to help you secure employment after completing your studies."
     }
   ]
 }

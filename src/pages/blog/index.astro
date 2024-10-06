@@ -1,15 +1,20 @@
 ---
-// Import necessary components, modules and types
+// Import necessary components, modules, and types
 import MainLayout from "@/layouts/MainLayout.astro";
 import CardBlog from "@components/ui/cards/CardBlog.astro";
 import CardBlogRecent from "@components/ui/cards/CardBlogRecent.astro";
 import CardInsight from "@components/ui/cards/CardInsight.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import CardSmall from "@components/ui/cards/CardSmall.astro";
+import CardWide from "@components/ui/cards/CardWide.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+import SearchBar from "@components/ui/SearchBar.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
-// Get all blogs post in English and sort them based on publish date
-
+// Get all blog posts in English and sort them based on publish date
 const englishBlogEntries = await getCollection("blog", ({ id }) => {
   return id.startsWith("en/");
 });
@@ -18,25 +23,90 @@ const englishInsightsEntries = await getCollection("insights", ({ id }) => {
   return id.startsWith("en/");
 });
 
+// Fetch all product posts
+const englishProductEntries = await getCollection("products", ({ id }) => {
+  return id.startsWith("en/");
+});
+
+// Sort blog posts by publication date
 const blogPosts: CollectionEntry<"blog">[] = englishBlogEntries.sort(
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
 // Get all insights posts
 const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
 
-// Separate the most recent post from others
+// Separate the most recent blog post from others
 const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
 const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 
+// Fetching all the program-related content and sorting it by main.id
+const product: CollectionEntry<"products">[] = (
+  await getCollection("products", ({ id }) => {
+    return id.startsWith("en/");
+  })
+).sort(
+  (a: CollectionEntry<"products">, b: CollectionEntry<"products">) =>
+    a.data.main.id - b.data.main.id
+);
+
+// Initialize search query
+let query = "";
+// Function to handle search query updates
+function handleSearch(newQuery) {
+  query = newQuery.toLowerCase();
+}
+
+// Filter posts based on search query
+const filteredPosts = otherPosts.filter((post) =>
+  post.data.title.toLowerCase().includes(query)
+);
+
 // Define variables for page content
-const title: string = "Your Gateway to Construction Excellence";
+const title: string = "Your Gateway to Excellence in Higher Education Abroad";
 const subTitle: string =
-  "Explore the latest news, tips, and insights from ScrewFast to enhance your construction projects. From product spotlights to project management strategies, our blog is your go-to resource for all things hardware and construction.";
+  "Explore the latest news, tips, and analyses to enhance your study abroad journey. From program highlights to strategies for academic success, our blog is your go-to resource for everything related to higher education abroad.";
 const secondTitle: string = "Insights";
 const secondSubTitle: string =
-  "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts. ";
+  "Stay up-to-date with the latest trends and developments in international education, thanks to expert insights from our team.";
+const productTitle: string = "Featured Programs";
+const productSubTitle: string =
+  "Explore our diverse range of programs designed to empower students for success in their academic journeys.";
 
+// Testimonial data that will be rendered in the component
+const testimonials = [
+  {
+    content:
+      "Studying abroad has transformed my academic journey. The resources and support provided by BookEducation were invaluable in navigating the complexities of international education. I now have a global perspective that enhances my studies.",
+    author: "Emily Johnson",
+    role: "Student | University of London",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Emily Johnson",
+  },
+
+  {
+    content:
+      "The guidance I received from BookEducation made my transition to studying abroad seamless. I was able to choose the right program that aligned with my career goals, and the support staff was always there to help.",
+    author: "Carlos Mendez",
+    role: "Graduate Student | University of Melbourne",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Carlos Mendez",
+  },
+
+  {
+    content:
+      "As a first-generation college student, I was nervous about studying abroad. However, the support and resources provided by BookEducation gave me the confidence I needed to pursue my dreams. I highly recommend their services!",
+    author: "Fatima Ali",
+    role: "Undergraduate Student | University of Toronto",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Fatima Ali",
+  },
+];
+// Title for the page
 const pageTitle: string = `Blog | ${SITE.title}`;
 ---
 
@@ -49,28 +119,32 @@ const pageTitle: string = `Blog | ${SITE.title}`;
     url: "https://screwfast.uk/blog",
     name: "Blog | ScrewFast",
     description:
-      "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts.",
+      "Stay up-to-date with the latest trends and developments in international education, thanks to expert insights from our team.",
     isPartOf: {
       "@type": "WebSite",
       url: "https://screwfast.uk",
-      name: "ScrewFast",
+      name: "BookEducation",
       description:
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "BookEducation offers top-tier guidance and expert services to help you excel in your higher education abroad journey.",
     },
     inLanguage: "en-US",
   }}
 >
+  <!-- Search Bar -->
+  <section class="pt-8">
+    <SearchBar query={query} handleSearch={handleSearch} />
+  </section>
+  
   <section
     class="mx-auto max-w-[85rem] space-y-8 px-4 pt-16 sm:px-6 lg:px-8 2xl:max-w-full"
   >
-    <!--Page header-->
+    <!-- Page header -->
     <div class="mx-auto max-w-3xl text-left sm:text-center">
       <h1
         class="block text-balance text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
       >
         {title}
       </h1>
-
       <p
         class="mt-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
       >
@@ -82,18 +156,75 @@ const pageTitle: string = `Blog | ${SITE.title}`;
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
-    <!--Blog posts grid-->
+    <!-- Blog posts grid -->
     <div class="grid gap-6 lg:grid-cols-2">
       {otherPosts.map((blogEntry) => <CardBlog blogEntry={blogEntry} />)}
     </div>
   </section>
-  <!--Most recent blog post-->
+
+  <!-- Most recent blog post -->
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
     <CardBlogRecent blogEntry={mostRecentPost} />
   </section>
-  <!--Insights section-->
+
+  <div
+  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+>
+  <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+    <div class="flex items-center gap-12">
+      <h1
+        class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+      >
+        {title}
+      </h1>
+      {
+        subTitle && (
+          <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
+            {subTitle}
+          </p>
+        )
+      }
+    </div>
+    <PrimaryCTA
+      title="Student Success Stories"
+      url="#testimonials"
+      noArrow={true}
+    />
+  </div>
+  <!--Displaying programs in alternating styles. Alternative program gets different card styling.-->
+  <!--Maps through all program entries and displays them with either CardSmall or CardWide based on their position.-->
+  <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+    {
+      product.map((product, index) => {
+        const position = index % 4;
+        if (position === 0 || position === 3) {
+          return <CardSmall product={product} productLocale="en" />;
+        } else {
+          return <CardWide product={product} productLocale="en" />;
+        }
+      })
+    }
+  </section>
+</div>
+<!--Features statistics section-->
+<FeaturesStatsAlt
+  title="Why Choose BookEducation?"
+  subTitle="Transform your academic dreams into reality with BookEducation. Whether you're planning your first study abroad experience or looking to expand your global horizons, we are here to help you succeed."
+  benefits={[
+    "Expert guidance on program selection and application processes.",
+    "Comprehensive resources for international students.",
+    "Dedicated support from experienced advisors throughout your journey.",
+  ]}
+/>
+<!--Testimonials section-->
+<TestimonialsSectionAlt
+  title="What Our Students Are Saying"
+  testimonials={testimonials}
+/>
+
+  <!-- Insights section -->
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
@@ -108,11 +239,9 @@ const pageTitle: string = `Blog | ${SITE.title}`;
       </p>
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        insightPosts.map((insightEntry) => (
-          <CardInsight insightEntry={insightEntry} />
-        ))
-      }
+      {insightPosts.map((insightEntry) => (
+        <CardInsight insightEntry={insightEntry} />
+      ))}
     </div>
   </section>
 </MainLayout>
