@@ -1,8 +1,12 @@
 ---
-// Import the necessary components
+/* 
+  index.astro
+  Page d'accueil principale avec diverses sections.
+*/
+
+// Imports pour les mises en page et les sections
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
-import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
@@ -10,136 +14,138 @@ import TestimonialsSection from "@components/sections/testimonials/TestimonialsS
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
-import faqs from "@data/fr/faqs.json";
-import features from "@data/fr/features.json";
-import pricing from "@data/fr/pricing.json";
-import featureImage from "@images/features-image.avif";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
+// Imports d'images
+import heroImage from "@images/education-abroad.jpg";
+import australiaImage from "@images/AIMAGE.webp"; 
+import ukImage from "@images/ukimage.webp"; 
+import usImage from "@images/usimage.webp"; 
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import pricing from "@data/pricing.json";
+
+// Sources des avatars
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
   "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
   "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
 ];
 ---
-
-<MainLayout lang="fr">
+<MainLayout
+  title="Accueil | Votre Site"
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://yourwebsite.com/",
+    "url": "https://yourwebsite.com/",
+    "name": "Accueil | Votre Site",
+    "description": "Bienvenue sur Votre Site, votre passerelle vers les opportunités d'enseignement supérieur à travers le monde.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://yourwebsite.com",
+      "name": "Votre Site",
+      "description": "Découvrez les meilleurs programmes d'éducation internationale et les ressources pour vous aider à réussir votre parcours académique."
+    },
+    "inLanguage": "fr-FR"
+  }}
+>
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Découvrez ScrewFast sur GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
+    btnTitle="Explorez l'Enseignement Supérieur sur GitHub"
+    url="https://yourblog.com/higher-education-resources"
   />
 
   <HeroSection
-    title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
-    primaryBtn="Commencez à explorer"
-    primaryBtnURL={getRelativeLocaleUrl("fr", "products")}
-    secondaryBtn="Contacter l'équipe commerciale"
-    secondaryBtnURL={getRelativeLocaleUrl("fr", "contact")}
+    title="Explorez les Opportunités d'Enseignement Supérieur"
+    subTitle="Obtenez des conseils d'experts pour étudier à l'étranger dans les meilleures destinations du monde."
+    primaryBtn="Commencer l'Exploration"
+    primaryBtnURL="/products"
+    secondaryBtn="Contacter un Consultant en Éducation"
+    secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
+    rating="4.9"
+    reviews="Basé sur 10k avis d'étudiants"
     src={heroImage}
-    alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
+    alt="Étudiants explorant les opportunités d'enseignement supérieur"
   />
 
   <ClientsSection
-    title="Faites confiance aux leaders de l'industrie"
-    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
+    title="Fiable par les Étudiants du Monde Entier"
+    subTitle="Rejoignez des milliers d'étudiants qui ont réalisé avec succès leurs rêves à l'étranger."
   />
 
+  <!-- Section Vidéo Intégrée -->
+  <section class="video-section py-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Découvrez l'Enseignement Supérieur à l'Étranger</h2>
+    <div class="video-wrapper mx-auto max-w-4xl">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/Ai3-EjBpuhs" title="Enseignement Supérieur à l'Étranger" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
   <FeaturesGeneral
-    title="Répondre aux exigences de l'industrie"
-    subTitle="Chez ScrewFast, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs."
-    src={featureImage}
-    alt="Produits ScrewFast dans des boîtes flottantes"
+    title="Pourquoi Nous Choisir ?"
+    subTitle="Nous fournissons un soutien complet pour vous aider à naviguer dans les complexités de l'étude à l'étranger."
+    alt="Caractéristiques de l'étude à l'étranger"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.`
+    title="Découvrez l'Enseignement Supérieur en"
     tabs={[
       {
-        heading: "Outils de pointe",
-        content:
-          "Optimisez vos projets avec les outils de pointe de ScrewFast. Faites l'expérience d'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.",
-        svg: "tools",
-        src: tools,
-        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
+        heading: "Étudier aux États-Unis",
+        content: "Découvrez les meilleures universités et les opportunités de bourses aux États-Unis.",
+        svg: "usa",
+        src: usImage,
+        alt: "Campus des États-Unis",
         first: true,
       },
       {
-        heading: "Tableaux de bord intuitifs",
-        content:
-          "Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
-        second: true,
+        heading: "Étudier au Royaume-Uni",
+        content: "Découvrez les universités prestigieuses et les options de travail après les études au Royaume-Uni.",
+        svg: "uk",
+        src: ukImage,
+        alt: "Université du Royaume-Uni",
       },
       {
-        heading: "Fonctionnalités robustes",
-        content:
-          "Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.",
-        svg: "house",
-        src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        heading: "Étudier en Australie",
+        content: "Découvrez une éducation de classe mondiale et la vie étudiante en Australie.",
+        svg: "australia",
+        src: australiaImage,
+        alt: "Campus en Australie",
       },
     ]}
   />
 
   <TestimonialsSection
-    title="Accélérez vos projets"
-    subTitle="Chez ScrewFast, nous assurons un démarrage rapide avec une configuration de compte instantanée. Découvrez la vitesse de la construction redéfinie."
+    title="Écoutez Nos Étudiants"
+    subTitle="Des milliers d'étudiants ont réalisé leurs rêves grâce à nos conseils."
     testimonials={[
       {
-        content:
-          "ScrewFast a considérablement augmenté l'efficacité de notre projet. La configuration a été instantanée et leurs temps de réponse rapides sont phénoménaux. Vraiment un changement de jeu dans le support matériel et de construction !",
-        author: "Samantha Ruiz",
-        role: "Directrice des opérations | ConstructIt Inc.",
+        content: "Grâce à vos services, j'ai pu obtenir une admission dans l'université de mes rêves au Royaume-Uni !",
+        author: "John Doe",
+        role: "Étudiant en Master, Université de Londres",
         avatarSrc:
           "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
       },
     ]}
     statistics={[
       {
-        count: "70k+",
-        description:
-          "clients équipés — des bricoleurs aux grandes entreprises de construction",
+        count: "50k+",
+        description: "étudiants placés avec succès dans des universités du monde entier",
       },
       {
-        count: "35%",
-        description:
-          "hausse de l'efficacité des projets avec les outils et services de ScrewFast",
+        count: "95%",
+        description: "taux de satisfaction des étudiants envers nos services",
       },
       {
-        count: "15,3%",
-        description:
-          "réduction des coûts de maintenance rapportée par des clients à long terme",
-      },
-      {
-        count: "2x",
-        description:
-          "assemblage plus rapide grâce à des solutions de fixation innovantes",
+        count: "100+",
+        description: "universités partenaires dans le monde entier",
       },
     ]}
   />
 
-  <PricingSection pricing={pricing} />
-
-  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
-
-  <HeroSectionAlt
-    title="Construisons ensemble"
-    subTitle="ScrewFast est un modèle open source, méticuleusement conçu avec les frameworks Astro, Tailwind CSS et Preline UI."
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
+  <FAQ title="Questions<br />Fréquemment Posées" faqs={faqs} />
 </MainLayout>
