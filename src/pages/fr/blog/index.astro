@@ -13,6 +13,7 @@ import SearchBar from "@components/ui/SearchBar.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
+import type { string } from "astro:schema";
 
 // Get all blogs post in French and sort them based on publish date
 
@@ -49,7 +50,7 @@ const product: CollectionEntry<"products">[] = (
 let query = "";
 
 // Function to handle search query updates
-function handleSearch(newQuery) {
+function handleSearch(newQuery: string) {
   query = newQuery.toLowerCase();
 }
 
