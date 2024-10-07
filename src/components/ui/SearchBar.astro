@@ -1,8 +1,10 @@
 ---
+// Import relevant dependencies
 const { query, handleSearch } = Astro.props;
 let searchQuery: string = query || ""; // Ensure searchQuery is always a string
 
-function handleIconClick() {
+function handleIconClick(event: MouseEvent) {
+  event.preventDefault(); // Prevent default action if necessary
   handleSearch(searchQuery);
 }
 ---
@@ -12,9 +14,7 @@ function handleIconClick() {
     type="text"
     placeholder="Search posts..."
     value={searchQuery}
-    onInput={(e: Event) => {
-      searchQuery = (e.target as HTMLInputElement).value;
-    }}
+    
     class="w-full p-4 pl-10 pr-6 text-sm bg-white border rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
   />
   <svg
@@ -23,7 +23,7 @@ function handleIconClick() {
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    onClick={handleIconClick}
+     
   >
     <path
       stroke-linecap="round"

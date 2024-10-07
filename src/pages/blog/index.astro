@@ -58,6 +58,7 @@ function handleSearch(newQuery: string) {
   query = newQuery.toLowerCase();
 }
 
+
 // Filter posts based on search query
 const filteredPosts = otherPosts.filter((post) =>
   post.data.title.toLowerCase().includes(query)
